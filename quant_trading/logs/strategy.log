@@ -1,0 +1,387 @@
+[2025-02-13 17:31:43.179] [strategy_logger] [error] 无法打开数据库: unable to open database file
+[2025-02-13 17:38:22.340] [strategy_logger] [info] 数据库连接已关闭
+[2025-02-13 17:39:06.873] [strategy_logger] [info] 数据库连接已关闭
+[2025-02-13 17:39:18.164] [strategy_logger] [info] 数据库连接已关闭
+[2025-02-13 18:21:00.514] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 18:21:00.516] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.25 < 112.25
+[2025-02-13 18:21:00.516] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.516] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.70 < 112.74
+[2025-02-13 18:21:00.516] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.516] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.05 < 113.21
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.30 < 113.66
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.45 < 114.09
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.50 < 114.50
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.45 < 114.89
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.30 < 115.26
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.05 < 115.61
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.70 < 115.94
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.25 < 116.25
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.75 < 116.54
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.25 < 116.81
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.75 < 117.06
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.25 < 117.29
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 119.75 < 117.50
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 119.25 < 117.69
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.75 < 117.86
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.25 < 118.01
+[2025-02-13 18:21:00.517] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.517] [strategy_logger] [info] 检测到死叉信号 SH600519: 117.75 < 118.14
+[2025-02-13 18:21:00.519] [strategy_logger] [info] 检测到金叉信号 SH600519: 109.75 > 109.01
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 111.25 < 109.00
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 112.75 < 109.03
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 114.25 < 109.10
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 115.75 < 109.21
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 117.25 < 109.36
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.75 < 109.55
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.25 < 109.78
+[2025-02-13 18:21:00.520] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.520] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.75 < 110.05
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.25 < 110.36
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 124.75 < 110.71
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 126.25 < 111.10
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 127.75 < 111.53
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 129.25 < 112.00
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 130.75 < 112.51
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 132.25 < 113.06
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 133.75 < 113.65
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 135.25 < 114.28
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 136.75 < 114.95
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 138.25 < 115.66
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 139.75 < 116.41
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 141.25 < 117.20
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 142.75 < 118.03
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 144.25 < 118.90
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 145.75 < 119.81
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 147.25 < 120.76
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 148.75 < 121.75
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 150.25 < 122.78
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 151.75 < 123.85
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 153.25 < 124.96
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 154.75 < 126.11
+[2025-02-13 18:21:00.521] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.521] [strategy_logger] [info] 检测到量价齐升 SH600519: 156.25 < 127.30
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 检测到量价齐升 SH600519: 157.75 < 128.53
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 检测到量价齐升 SH600519: 159.25 < 129.80
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 检测到量价齐升 SH600519: 160.75 < 131.11
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 检测到量价齐升 SH600519: 162.25 < 132.46
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 检测到量价齐升 SH600519: 163.75 < 133.85
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 检测到量价齐升 SH600519: 165.25 < 135.28
+[2025-02-13 18:21:00.522] [strategy_logger] [error] 插入信号失败: CHECK constraint failed: signal_type IN ('GOLDEN_CROSS', 'DEATH_CROSS')
+[2025-02-13 18:21:00.522] [strategy_logger] [info] 数据库连接已关闭
+[2025-02-13 20:31:08.619] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.620] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:31:08.621] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.25 < 112.25
+[2025-02-13 20:31:08.624] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.70 < 112.74
+[2025-02-13 20:31:08.625] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.05 < 113.21
+[2025-02-13 20:31:08.626] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.30 < 113.66
+[2025-02-13 20:31:08.627] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.45 < 114.09
+[2025-02-13 20:31:08.628] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.50 < 114.50
+[2025-02-13 20:31:08.628] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.45 < 114.89
+[2025-02-13 20:31:08.629] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.30 < 115.26
+[2025-02-13 20:31:08.629] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.05 < 115.61
+[2025-02-13 20:31:08.630] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.70 < 115.94
+[2025-02-13 20:31:08.630] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.25 < 116.25
+[2025-02-13 20:31:08.631] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.75 < 116.54
+[2025-02-13 20:31:08.631] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.25 < 116.81
+[2025-02-13 20:31:08.632] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.75 < 117.06
+[2025-02-13 20:31:08.632] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.25 < 117.29
+[2025-02-13 20:31:08.633] [strategy_logger] [info] 检测到量价齐升 SH600519: 119.75 < 117.50
+[2025-02-13 20:31:08.633] [strategy_logger] [info] 检测到量价齐升 SH600519: 119.25 < 117.69
+[2025-02-13 20:31:08.634] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.75 < 117.86
+[2025-02-13 20:31:08.634] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.25 < 118.01
+[2025-02-13 20:31:08.635] [strategy_logger] [info] 检测到死叉信号 SH600519: 117.75 < 118.14
+[2025-02-13 20:31:08.635] [strategy_logger] [info] 检测到金叉信号 SH600519: 109.75 > 109.01
+[2025-02-13 20:31:08.636] [strategy_logger] [info] 检测到量价齐升 SH600519: 111.25 < 109.00
+[2025-02-13 20:31:08.636] [strategy_logger] [info] 检测到量价齐升 SH600519: 112.75 < 109.03
+[2025-02-13 20:31:08.636] [strategy_logger] [info] 检测到量价齐升 SH600519: 114.25 < 109.10
+[2025-02-13 20:31:08.637] [strategy_logger] [info] 检测到量价齐升 SH600519: 115.75 < 109.21
+[2025-02-13 20:31:08.637] [strategy_logger] [info] 检测到量价齐升 SH600519: 117.25 < 109.36
+[2025-02-13 20:31:08.638] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.75 < 109.55
+[2025-02-13 20:31:08.638] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.25 < 109.78
+[2025-02-13 20:31:08.638] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.75 < 110.05
+[2025-02-13 20:31:08.639] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.25 < 110.36
+[2025-02-13 20:31:08.639] [strategy_logger] [info] 检测到量价齐升 SH600519: 124.75 < 110.71
+[2025-02-13 20:31:08.639] [strategy_logger] [info] 检测到量价齐升 SH600519: 126.25 < 111.10
+[2025-02-13 20:31:08.640] [strategy_logger] [info] 检测到量价齐升 SH600519: 127.75 < 111.53
+[2025-02-13 20:31:08.640] [strategy_logger] [info] 检测到量价齐升 SH600519: 129.25 < 112.00
+[2025-02-13 20:31:08.640] [strategy_logger] [info] 检测到量价齐升 SH600519: 130.75 < 112.51
+[2025-02-13 20:31:08.641] [strategy_logger] [info] 检测到量价齐升 SH600519: 132.25 < 113.06
+[2025-02-13 20:31:08.641] [strategy_logger] [info] 检测到量价齐升 SH600519: 133.75 < 113.65
+[2025-02-13 20:31:08.641] [strategy_logger] [info] 检测到量价齐升 SH600519: 135.25 < 114.28
+[2025-02-13 20:31:08.642] [strategy_logger] [info] 检测到量价齐升 SH600519: 136.75 < 114.95
+[2025-02-13 20:31:08.642] [strategy_logger] [info] 检测到量价齐升 SH600519: 138.25 < 115.66
+[2025-02-13 20:31:08.642] [strategy_logger] [info] 检测到量价齐升 SH600519: 139.75 < 116.41
+[2025-02-13 20:31:08.643] [strategy_logger] [info] 检测到量价齐升 SH600519: 141.25 < 117.20
+[2025-02-13 20:31:08.643] [strategy_logger] [info] 检测到量价齐升 SH600519: 142.75 < 118.03
+[2025-02-13 20:31:08.644] [strategy_logger] [info] 检测到量价齐升 SH600519: 144.25 < 118.90
+[2025-02-13 20:31:08.644] [strategy_logger] [info] 检测到量价齐升 SH600519: 145.75 < 119.81
+[2025-02-13 20:31:08.644] [strategy_logger] [info] 检测到量价齐升 SH600519: 147.25 < 120.76
+[2025-02-13 20:31:08.644] [strategy_logger] [info] 检测到量价齐升 SH600519: 148.75 < 121.75
+[2025-02-13 20:31:08.645] [strategy_logger] [info] 检测到量价齐升 SH600519: 150.25 < 122.78
+[2025-02-13 20:31:08.645] [strategy_logger] [info] 检测到量价齐升 SH600519: 151.75 < 123.85
+[2025-02-13 20:31:08.645] [strategy_logger] [info] 检测到量价齐升 SH600519: 153.25 < 124.96
+[2025-02-13 20:31:08.646] [strategy_logger] [info] 检测到量价齐升 SH600519: 154.75 < 126.11
+[2025-02-13 20:31:08.646] [strategy_logger] [info] 检测到量价齐升 SH600519: 156.25 < 127.30
+[2025-02-13 20:31:08.646] [strategy_logger] [info] 检测到量价齐升 SH600519: 157.75 < 128.53
+[2025-02-13 20:31:08.647] [strategy_logger] [info] 检测到量价齐升 SH600519: 159.25 < 129.80
+[2025-02-13 20:31:08.647] [strategy_logger] [info] 检测到量价齐升 SH600519: 160.75 < 131.11
+[2025-02-13 20:31:08.647] [strategy_logger] [info] 检测到量价齐升 SH600519: 162.25 < 132.46
+[2025-02-13 20:31:08.647] [strategy_logger] [info] 检测到量价齐升 SH600519: 163.75 < 133.85
+[2025-02-13 20:31:08.648] [strategy_logger] [info] 检测到量价齐升 SH600519: 165.25 < 135.28
+[2025-02-13 20:31:08.648] [strategy_logger] [info] 数据库连接已关闭
+[2025-02-13 20:36:56.672] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [warning] 数据不足，需要至少50个价格点
+[2025-02-13 20:36:56.673] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.25 < 112.25
+[2025-02-13 20:36:56.675] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.70 < 112.74
+[2025-02-13 20:36:56.675] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.05 < 113.21
+[2025-02-13 20:36:56.676] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.30 < 113.66
+[2025-02-13 20:36:56.677] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.45 < 114.09
+[2025-02-13 20:36:56.677] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.50 < 114.50
+[2025-02-13 20:36:56.678] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.45 < 114.89
+[2025-02-13 20:36:56.679] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.30 < 115.26
+[2025-02-13 20:36:56.679] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.05 < 115.61
+[2025-02-13 20:36:56.680] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.70 < 115.94
+[2025-02-13 20:36:56.681] [strategy_logger] [info] 检测到量价齐升 SH600519: 122.25 < 116.25
+[2025-02-13 20:36:56.681] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.75 < 116.54
+[2025-02-13 20:36:56.682] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.25 < 116.81
+[2025-02-13 20:36:56.682] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.75 < 117.06
+[2025-02-13 20:36:56.683] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.25 < 117.29
+[2025-02-13 20:36:56.683] [strategy_logger] [info] 检测到量价齐升 SH600519: 119.75 < 117.50
+[2025-02-13 20:36:56.684] [strategy_logger] [info] 检测到量价齐升 SH600519: 119.25 < 117.69
+[2025-02-13 20:36:56.684] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.75 < 117.86
+[2025-02-13 20:36:56.685] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.25 < 118.01
+[2025-02-13 20:36:56.686] [strategy_logger] [info] 检测到死叉信号 SH600519: 117.75 < 118.14
+[2025-02-13 20:36:56.687] [strategy_logger] [info] 检测到金叉信号 SH600519: 109.75 > 109.01
+[2025-02-13 20:36:56.688] [strategy_logger] [info] 检测到量价齐升 SH600519: 111.25 < 109.00
+[2025-02-13 20:36:56.688] [strategy_logger] [info] 检测到量价齐升 SH600519: 112.75 < 109.03
+[2025-02-13 20:36:56.689] [strategy_logger] [info] 检测到量价齐升 SH600519: 114.25 < 109.10
+[2025-02-13 20:36:56.689] [strategy_logger] [info] 检测到量价齐升 SH600519: 115.75 < 109.21
+[2025-02-13 20:36:56.689] [strategy_logger] [info] 检测到量价齐升 SH600519: 117.25 < 109.36
+[2025-02-13 20:36:56.690] [strategy_logger] [info] 检测到量价齐升 SH600519: 118.75 < 109.55
+[2025-02-13 20:36:56.690] [strategy_logger] [info] 检测到量价齐升 SH600519: 120.25 < 109.78
+[2025-02-13 20:36:56.691] [strategy_logger] [info] 检测到量价齐升 SH600519: 121.75 < 110.05
+[2025-02-13 20:36:56.692] [strategy_logger] [info] 检测到量价齐升 SH600519: 123.25 < 110.36
+[2025-02-13 20:36:56.692] [strategy_logger] [info] 检测到量价齐升 SH600519: 124.75 < 110.71
+[2025-02-13 20:36:56.693] [strategy_logger] [info] 检测到量价齐升 SH600519: 126.25 < 111.10
+[2025-02-13 20:36:56.693] [strategy_logger] [info] 检测到量价齐升 SH600519: 127.75 < 111.53
+[2025-02-13 20:36:56.693] [strategy_logger] [info] 检测到量价齐升 SH600519: 129.25 < 112.00
+[2025-02-13 20:36:56.694] [strategy_logger] [info] 检测到量价齐升 SH600519: 130.75 < 112.51
+[2025-02-13 20:36:56.694] [strategy_logger] [info] 检测到量价齐升 SH600519: 132.25 < 113.06
+[2025-02-13 20:36:56.695] [strategy_logger] [info] 检测到量价齐升 SH600519: 133.75 < 113.65
+[2025-02-13 20:36:56.695] [strategy_logger] [info] 检测到量价齐升 SH600519: 135.25 < 114.28
+[2025-02-13 20:36:56.695] [strategy_logger] [info] 检测到量价齐升 SH600519: 136.75 < 114.95
+[2025-02-13 20:36:56.696] [strategy_logger] [info] 检测到量价齐升 SH600519: 138.25 < 115.66
+[2025-02-13 20:36:56.696] [strategy_logger] [info] 检测到量价齐升 SH600519: 139.75 < 116.41
+[2025-02-13 20:36:56.697] [strategy_logger] [info] 检测到量价齐升 SH600519: 141.25 < 117.20
+[2025-02-13 20:36:56.697] [strategy_logger] [info] 检测到量价齐升 SH600519: 142.75 < 118.03
+[2025-02-13 20:36:56.697] [strategy_logger] [info] 检测到量价齐升 SH600519: 144.25 < 118.90
+[2025-02-13 20:36:56.698] [strategy_logger] [info] 检测到量价齐升 SH600519: 145.75 < 119.81
+[2025-02-13 20:36:56.698] [strategy_logger] [info] 检测到量价齐升 SH600519: 147.25 < 120.76
+[2025-02-13 20:36:56.698] [strategy_logger] [info] 检测到量价齐升 SH600519: 148.75 < 121.75
+[2025-02-13 20:36:56.699] [strategy_logger] [info] 检测到量价齐升 SH600519: 150.25 < 122.78
+[2025-02-13 20:36:56.699] [strategy_logger] [info] 检测到量价齐升 SH600519: 151.75 < 123.85
+[2025-02-13 20:36:56.699] [strategy_logger] [info] 检测到量价齐升 SH600519: 153.25 < 124.96
+[2025-02-13 20:36:56.700] [strategy_logger] [info] 检测到量价齐升 SH600519: 154.75 < 126.11
+[2025-02-13 20:36:56.700] [strategy_logger] [info] 检测到量价齐升 SH600519: 156.25 < 127.30
+[2025-02-13 20:36:56.700] [strategy_logger] [info] 检测到量价齐升 SH600519: 157.75 < 128.53
+[2025-02-13 20:36:56.700] [strategy_logger] [info] 检测到量价齐升 SH600519: 159.25 < 129.80
+[2025-02-13 20:36:56.701] [strategy_logger] [info] 检测到量价齐升 SH600519: 160.75 < 131.11
+[2025-02-13 20:36:56.701] [strategy_logger] [info] 检测到量价齐升 SH600519: 162.25 < 132.46
+[2025-02-13 20:36:56.701] [strategy_logger] [info] 检测到量价齐升 SH600519: 163.75 < 133.85
+[2025-02-13 20:36:56.702] [strategy_logger] [info] 检测到量价齐升 SH600519: 165.25 < 135.28
+[2025-02-13 20:36:56.702] [strategy_logger] [info] 数据库连接已关闭
