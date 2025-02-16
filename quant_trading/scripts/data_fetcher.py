@@ -15,33 +15,50 @@ class EastMoneyFetcher:
         self.session = requests.Session()
         self.base_url = "http://quote.eastmoney.com/"
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15',
             'Accept': 'application/json, text/plain, */*',
             'Accept-Encoding': 'gzip, deflate, br',
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
             'Connection': 'keep-alive',
-            'Host': 'tradegf.eastmoney.com',
-            'Origin': 'https://tradegf.eastmoney.com',
-            'Referer': 'https://tradegf.eastmoney.com/Login/Index',
+            'Host': 'jywg.18.cn',
+            'Origin': 'https://jywg.18.cn',
+            'Referer': 'https://jywg.18.cn/Login/Login',
             'Sec-Fetch-Dest': 'empty',
             'Sec-Fetch-Mode': 'cors',
             'Sec-Fetch-Site': 'same-origin',
             'X-Requested-With': 'XMLHttpRequest'
         }
         
-    def login(self):
-        login_url = "https://tradegf.eastmoney.com/Login/LoginSubmit"
-        payload = {
-            'userCode': self.username,
-            'password': self.password,
-            'validateCode': '',
-            'holdAccount': 'false'
-        }
+    def get_verify_code(self):
+        verify_url = "https://jywg.18.cn/Login/GetVerifyCode"
+        response = self.session.get(verify_url)
+        with open("verify_code.jpg", "wb") as f:
+            f.write(response.content)
+        print("验证码已保存为verify_code.jpg，请查看并输入验证码")
+        return input("请输入验证码: ")
+
+    def login(self, retries=3):
+        for attempt in range(retries):
+            login_url = "https://jywg.18.cn/Login/Authentication"
+            verify_code = self.get_verify_code()
+            payload = {
+                "userId": self.username,
+                "password": self.password,
+                "randNumber": verify_code,
+                "identifyCode": "" 
+            }
+            time.sleep(2 ** attempt)  # 指数退避
+        print(f"发送登录请求到: {login_url}")
+        print(f"请求头: {self.headers}")
+        print(f"请求参数: {payload}")
         response = self.session.post(login_url, data=payload, headers=self.headers)
+        print(f"响应状态码: {response.status_code}")
+        print(f"响应头: {response.headers}")
+        print(f"响应内容: {response.text[:500]}")  # 显示前500字符
         try:
             return response.json().get('success', False)
         except Exception as e:
-            print(f"登录响应解析失败: {response.text}")
+            print(f"登录响应解析失败: {str(e)}")
             return False
 
     def fetch_realtime_data(self, stock_code):
