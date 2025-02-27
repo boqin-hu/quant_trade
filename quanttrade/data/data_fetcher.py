@@ -27,16 +27,146 @@ class DataFetcher:
             'Connection': 'keep-alive'
         }
         
-    def get_stock_data(self, ts_code: str, start_date: str, end_date: str) -> pd.DataFrame:
+    def get_daily_data(self, ts_code: str, start_date: str, end_date: str) -> pd.DataFrame:
         """从Tushare获取股票日线数据"""
         try:
             df = self.pro.daily(ts_code=ts_code, start_date=start_date, end_date=end_date)
             self._save_to_cache(df, f"{ts_code}_{start_date}_{end_date}.parquet")
             return df
         except Exception as e:
-            logger.error(f"Tushare数据获取失败: {str(e)}")
+            logger.error(f"Tushare数据获取日线数据失败: {str(e)}")
             raise
-            
+
+    def get_stock_list_data(self) -> pd.DataFrame:
+        """从Tushare获取股票列表数据
+        输入参数
+        名称	类型	必选	描述
+        ts_code	str	N	TS股票代码
+        name	str	N	名称
+        market	str	N	市场类别 （主板/创业板/科创板/CDR/北交所）
+        list_status	str	N	上市状态 L上市 D退市 P暂停上市，默认是L
+        exchange	str	N	交易所 SSE上交所 SZSE深交所 BSE北交所
+        is_hs	str	N	是否沪深港通标的，N否 H沪股通 S深股通
+        输出参数
+        名称	类型	默认显示	描述
+        ts_code	str	Y	TS代码
+        symbol	str	Y	股票代码
+        name	str	Y	股票名称
+        area	str	Y	地域
+        industry	str	Y	所属行业
+        fullname	str	N	股票全称
+        enname	str	N	英文全称
+        cnspell	str	Y	拼音缩写
+        market	str	Y	市场类型（主板/创业板/科创板/CDR）
+        exchange	str	N	交易所代码
+        curr_type	str	N	交易货币
+        list_status	str	N	上市状态 L上市 D退市 P暂停上市
+        list_date	str	Y	上市日期
+        delist_date	str	N	退市日期
+        is_hs	str	N	是否沪深港通标的，N否 H沪股通 S深股通
+        act_name	str	Y	实控人名称
+        act_ent_type	str	Y	实控人企业性质"""
+
+        try:
+        # enname	str	N	英文全称
+            df = self.pro.query('stock_basic', exchange='', list_status='L', fields='ts_code,symbol,name,area,\
+                industry,fullname,enname,cnspell,market,,exchange,curr_type,\
+                    list_status,list_date,delist_date,is_hs,act_name,act_ent_type')
+            df.to_csv('data/stock_list.csv',index=False)
+            # print(test_data.head())
+            # self._save_to_cache(df, f"{ts_code}_{start_date}_{end_date}.parquet")
+            return df
+        except Exception as e:
+            logger.error(f"Tushare数据获取股票列表失败: {str(e)}")
+            raise
+    
+    def get_name_change_data(self, ts_code: str) -> pd.DataFrame:
+        """" 描述：历史名称变更记录
+        输入参数
+        名称	类型	必选	描述
+        ts_code	str	N	TS代码
+        start_date	str	N	公告开始日期
+        end_date	str	N	公告结束日期
+        输出参数
+        名称	类型	默认输出	描述
+        ts_code	str	Y	TS代码
+        name	str	Y	证券名称
+        start_date	str	Y	开始日期
+        end_date	str	Y	结束日期
+        ann_date	str	Y	公告日期
+        change_reason	str	Y	变更原因"""
+        try:
+            df = self.pro.namechange(ts_code=ts_code, fields='ts_code,name,start_date,end_date,change_reason')
+            # print(df)
+            self._save_to_cache(df, f"{ts_code}_namechange.parquet")
+            return df
+        except Exception as e:
+            logger.error(f"Tushare数据获取名称变更信息失败: {str(e)}")
+            raise
+
+    def get_all_stock_basic_data(self) -> pd.DataFrame:
+        """上市公司基本信息
+        输入参数
+        名称	类型	必须	描述
+        ts_code	str	N	股票代码
+        exchange	str	N	交易所代码 ，SSE上交所 SZSE深交所 BSE北交所
+        输出参数
+        名称	类型	默认显示	描述
+        ts_code	str	Y	股票代码
+        com_name	str	Y	公司全称
+        com_id	str	Y	统一社会信用代码
+        exchange	str	Y	交易所代码
+        chairman	str	Y	法人代表
+        manager	str	Y	总经理
+        secretary	str	Y	董秘
+        reg_capital	float	Y	注册资本(万元)
+        setup_date	str	Y	注册日期
+        province	str	Y	所在省份
+        city	str	Y	所在城市
+        introduction	str	N	公司介绍
+        website	str	Y	公司主页
+        email	str	Y	电子邮件
+        office	str	N	办公室
+        employees	int	Y	员工人数
+        main_business	str	N	主要业务及产品
+        business_scope	str	N	经营范围"""
+        try:
+            df = self.pro.stock_company(exchange='SZSE', fields='ts_code,chairman,manager,secretary,reg_capital,setup_date,province,main_business,business_scope')
+            # print(test_data.head())
+            df.to_csv('data/all_stock_basic.csv',index=False)
+        except Exception as e:
+            logger.error(f"Tushare数据获取所有股票基本数据失败: {str(e)}")
+            raise
+
+    def get_ipo_list_data(self, start_date: str, end_date: str) -> pd.DataFrame:
+        """IPO新股列表
+        输入参数
+        名称	类型	必选	描述
+        start_date	str	N	上网发行开始日期
+        end_date	str	N	上网发行结束日期
+        输出参数
+        名称	类型	默认显示	描述
+        ts_code	str	Y	TS股票代码
+        sub_code	str	Y	申购代码
+        name	str	Y	名称
+        ipo_date	str	Y	上网发行日期
+        issue_date	str	Y	上市日期
+        amount	float	Y	发行总量（万股）
+        market_amount	float	Y	上网发行总量（万股）
+        price	float	Y	发行价格
+        pe	float	Y	市盈率
+        limit_amount	float	Y	个人申购上限（万股）
+        funds	float	Y	募集资金（亿元）
+        ballot	float	Y	中签率"""
+        try:
+            df = self.pro.new_share(start_date=start_date, end_date=end_date)
+            # print(df)
+            self._save_to_cache(df, f"IPO_list_{start_date}_{end_date}.parquet")
+            return df
+        except Exception as e:
+            logger.error(f"Tushare数据获取所有股票基本数据失败: {str(e)}")
+            raise
+    
     def fetch_financial_data(self, ts_code: str, report_type: str = 'annual') -> pd.DataFrame:
         """获取财务数据"""
         for _ in range(3):  # 重试机制
@@ -100,5 +230,195 @@ class SinaStockCrawler(AlternativeDataCrawler):
 if __name__ == "__main__":
     # 单元测试
     fetcher = DataFetcher()
-    test_data = fetcher.get_stock_data("000001.SZ", "20230101", "20231231")
-    print(test_data.head())
+    # fetcher.get_name_change_data('002008.SZ')
+    fetcher.get_ipo_list_data('20250210','20250226')
+    #交易日历  获取途径 1.tushare 权限2000 
+    # test_data = fetcher.pro.query('trade_cal', start_date='20180101', end_date='20181231')
+    # print(test_data.head())
+
+    # 已测试
+    # 股票列表数据 获取途径 1.tushare 权限2000(120也可以？)积分，2.爬虫 注意爬取频率！
+    # test_data = fetcher.pro.query('stock_basic', exchange='', list_status='L', fields='ts_code,symbol,name,area,industry,list_date')
+    # print(test_data.head())
+
+    #股票股本数据 获取途径 1.爬虫
+
+    #获取股票现金流  获取途径 1.爬虫
+    #SINA_CASHFLOW_URL = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_CashFlow/displaytype/4/stockid/%s/ctrl/all.phtml'
+
+    #已测试
+    #股票曾用名 获取途径 1.tushare 权限0积分
+    # test_data = fetcher.pro.namechange(ts_code='601949.SH', fields='ts_code,name,start_date,end_date,change_reason')
+    # print(test_data.head())
+
+    #沪深股通成分股列表 获取途径 1. tushare 权限0积分
+    # test_data = fetcher.pro.hs_const(hs_type='SH')
+    # print(test_data.head())
+    # test_data = fetcher.pro.hs_const(hs_type='SZ')
+    # print(test_data.head())
+
+    # 已测试
+    #上市公司基本信息 获取途径 1.tushare 权限120积分
+    # test_data = fetcher.pro.stock_company(exchange='SZSE', fields='ts_code,chairman,manager,secretary,reg_capital,setup_date,province,main_business,business_scope')
+    # print(test_data.head())
+
+    #上市公司高管信息 获取途径 1.tushare 权限2000积分 2.爬虫
+    #pro.stk_managers(ts_code='000001.SZ,600000.SH')
+
+    #上市公司管理层薪酬和持股 获取途径 1.tushare 权限2000积分 2.爬虫
+    #pro.stk_rewards(ts_code='000001.SZ,600000.SH')
+
+    #IPO新股列表 获取途径 1.tushare 权限120积分
+    # test_data = fetcher.pro.new_share(start_date='20250101', end_date='20250320')
+    # print(test_data.head())
+
+    #股票历史列表（历史每天股票列表）获取途径 1.tushare 
+    # test_data = fetcher.pro.bak_basic(trade_date='20250221', fields='trade_date,ts_code,name,industry,pe')
+    # print(test_data.head())
+
+    # 股票日K行情 获取途径 1.tushare 权限100积分
+    # test_data = fetcher.get_stock_data("000001.SZ", "20230101", "20231231")
+    # print(test_data.head())
+
+    #股票分钟行情 获取途径 1.tushare 权限120积分 可调取两次
+    #pro.stk_mins(ts_code='600000.SH', freq='1min', start_date='2023-08-25 09:00:00', end_date='2023-08-25 19:00:00')
+
+    #股票周线行情 获取途径 1.tushare 权限2000积分
+    #pro.weekly(ts_code='000001.SZ', start_date='20180101', end_date='20181101', fields='ts_code,trade_date,open,high,low,close,vol,amount')
+
+    #股票月线行情 获取途径 1.tushare 权限2000积分
+    # pro.monthly(trade_date='20181031', fields='ts_code,trade_date,open,high,low,close,vol,amount')
+
+    #A股复权行情 获取途径 1.tushare
+    # test_data = ts.pro_bar(ts_code='000001.SZ', adj='qfq', start_date='20180101', end_date='20181011')
+    # print(test_data.head())
+
+    #单只股票的复权因子 获取途径 1.tushare 权限2000
+    # pro.adj_factor(ts_code='', trade_date='20180718') 或者 pro.query('adj_factor',  trade_date='20180718')
+
+    #实时行情 获取途径 1. tushare
+    #sina数据
+    # df = ts.realtime_quote(ts_code='600000.SH,000001.SZ,000001.SH')
+    # print(df.head())
+    #东财数据
+    # df = ts.realtime_quote(ts_code='600000.SH', src='dc')
+
+    #实时成交数据 获取途径 1.tushare (源码做了限制 0.5s爬一次 速度很慢) src='sina' 'tx' 'dc'
+    # df = ts.realtime_tick(ts_code='002600.SZ')
+    # print(df)
+
+    #实时涨跌幅排名 获取途径 1.tushare src='sina' 'dc' 
+    # df = ts.realtime_list(src='sina') #重复运行本函数会被新浪暂时封 IP 需要用代理
+    # print(df)
+    # df = ts.realtime_list(src='dc') #建议用东财快一些 IP 需要用代理
+    # print(df)
+    # df.to_csv('ranklist.csv',index=False)
+
+    #每日指标 
+    # 接口：daily_basic，可以通过数据工具调试和查看数据。
+    # 更新时间：交易日每日15点～17点之间
+    # 描述：获取全部股票每日重要的基本面指标，可用于选股分析、报表展示等。
+    # 积分：至少2000积分才可以调取，5000积分无总量限制，具体请参阅积分获取办法
+    # pro.daily_basic(ts_code='', trade_date='20180726', fields='ts_code,trade_date,turnover_rate,volume_ratio,pe,pb')
+
+    #涨跌停价格
+    # 接口：stk_limit
+    # 描述：获取全市场（包含A/B股和基金）每日涨跌停价格，包括涨停价格，跌停价格等，每个交易日8点40左右更新当日股票涨跌停价格。
+    # 限量：单次最多提取5800条记录，可循环调取，总量不限制
+    # 积分：用户积2000积分可调取，单位分钟有流控，积分越高流量越大，请自行提高积分，具体请参阅积分获取办法 
+    #获取单日全部股票数据涨跌停价格
+    # df = pro.stk_limit(trade_date='20190625')
+    #获取单个股票数据
+    # df = pro.stk_limit(ts_code='002149.SZ', start_date='20190115', end_date='20190615')
+
+    #每日停复牌信息
+    # 接口：suspend_d
+    # 更新时间：不定期
+    # 描述：按日期方式获取股票每日停复牌信息
+    # df = fetcher.pro.suspend_d(suspend_type='S', trade_date='20250225')
+    # print(df)
+
+    #沪深股通十大成交股
+    # 接口：hsgt_top10
+    # 描述：获取沪股通、深股通每日前十大成交详细数据，每天18~20点之间完成当日更新
+    # df = fetcher.pro.hsgt_top10(trade_date='20250224', market_type='1')
+    # print(df)
+
+    #港股通十大成交股
+    # 接口：ggt_top10
+    # 描述：获取港股通每日成交数据，其中包括沪市、深市详细数据，每天18~20点之间完成当日更新
+    # df = fetcher.pro.ggt_top10(trade_date='20250224')
+    # print(df)
+
+    #港股通每日成交统计
+    # 接口：ggt_daily
+    # 描述：获取港股通每日成交信息，数据从2014年开始
+    # 限量：单次最大1000，总量数据不限制
+    # 积分：用户积2000积分可调取，5000积分以上频次相对较高，请自行提高积分，具体请参阅积分获取办法
+    #获取单日全部统计
+    # df = pro.ggt_daily(trade_date='20190625')
+    # #获取多日统计信息
+    # df = pro.ggt_daily(trade_date='20190925,20180924,20170925')
+    # #获取时间段统计信息
+    # df = pro.ggt_daily(start_date='20180925', end_date='20190925)
+
+    #港股通每月成交统计
+    # 接口：ggt_monthly
+    # 描述：港股通每月成交信息，数据从2014年开始
+    # 限量：单次最大1000
+    # 积分：用户积5000积分可调取，请自行提高积分，具体请参阅积分获取办法
+    #获取单月全部统计
+    # df = pro.ggt_monthly(trade_date='201906')
+    # #获取多月统计信息
+    # df = pro.ggt_monthly(trade_date='201906,201907,201709')
+    # #获取时间段统计信息
+    # df = pro.ggt_monthly(start_date='201809', end_date='201908')
+
+    #备用行情
+    # 接口：bak_daily
+    # 描述：获取备用行情，包括特定的行情指标(数据从2017年中左右开始，早期有几天数据缺失，近期正常)
+    # 限量：单次最大7000行数据，可以根据日期参数循环获取，正式权限需要5000积分。
+    # df = pro.bak_daily(trade_date='20211012', fields='trade_date,ts_code,name,close,open')
+
+    #利润表
+    # 接口：income，可以通过数据工具调试和查看数据。
+    # 描述：获取上市公司财务利润表数据
+    # 积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # df = fetcher.pro.income(ts_code='600000.SH', start_date='20180101', end_date='20180730', fields='ts_code,ann_date,f_ann_date,end_date,report_type,comp_type,basic_eps,diluted_eps')
+    # print(df)
+
+    #资产负债表
+    # 接口：balancesheet，可以通过数据工具调试和查看数据。
+    # 描述：获取上市公司资产负债表
+    # 积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # df = pro.balancesheet(ts_code='600000.SH', start_date='20180101', end_date='20180730', fields='ts_code,ann_date,f_ann_date,end_date,report_type,comp_type,cap_rese')
+
+    #现金流量表
+    # 接口：cashflow，可以通过数据工具调试和查看数据。
+    # 描述：获取上市公司现金流量表
+    # 积分：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # df = pro.cashflow(ts_code='600000.SH', start_date='20180101', end_date='20180730')
+
+    # 业绩预告
+    # 接口：forecast，可以通过数据工具调试和查看数据。
+    # 描述：获取业绩预告数据
+    # 权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # pro.forecast(ann_date='20190131', fields='ts_code,ann_date,end_date,type,p_change_min,p_change_max,net_profit_min')
+
+    # 业绩快报
+    # 接口：express
+    # 描述：获取上市公司业绩快报
+    # 权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # pro.express(ts_code='600000.SH', start_date='20180101', end_date='20180701', fields='ts_code,ann_date,end_date,revenue,operate_profit,total_profit,n_income,total_assets')
+
+    # 分红送股
+    # 接口：dividend
+    # 描述：分红送股数据
+    # 权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # df = pro.dividend(ts_code='600848.SH', fields='ts_code,div_proc,stk_div,record_date,ex_date')
+
+    # 财务指标数据
+    # 接口：fina_indicator，可以通过数据工具调试和查看数据。
+    # 描述：获取上市公司财务指标数据，为避免服务器压力，现阶段每次请求最多返回60条记录，可通过设置日期多次请求获取更多数据。
+    # 权限：用户需要至少2000积分才可以调取，具体请参阅积分获取办法
+    # df = pro.query('fina_indicator', ts_code='600000.SH', start_date='20170101', end_date='20180801')
