@@ -38,35 +38,34 @@ class DataFetcher:
             raise
 
     def get_stock_list_data(self) -> pd.DataFrame:
-        """从Tushare获取股票列表数据
-        输入参数
-        名称	类型	必选	描述
-        ts_code	str	N	TS股票代码
-        name	str	N	名称
-        market	str	N	市场类别 （主板/创业板/科创板/CDR/北交所）
-        list_status	str	N	上市状态 L上市 D退市 P暂停上市，默认是L
-        exchange	str	N	交易所 SSE上交所 SZSE深交所 BSE北交所
-        is_hs	str	N	是否沪深港通标的，N否 H沪股通 S深股通
-        输出参数
-        名称	类型	默认显示	描述
-        ts_code	str	Y	TS代码
-        symbol	str	Y	股票代码
-        name	str	Y	股票名称
-        area	str	Y	地域
-        industry	str	Y	所属行业
-        fullname	str	N	股票全称
-        enname	str	N	英文全称
-        cnspell	str	Y	拼音缩写
-        market	str	Y	市场类型（主板/创业板/科创板/CDR）
-        exchange	str	N	交易所代码
-        curr_type	str	N	交易货币
-        list_status	str	N	上市状态 L上市 D退市 P暂停上市
-        list_date	str	Y	上市日期
-        delist_date	str	N	退市日期
-        is_hs	str	N	是否沪深港通标的，N否 H沪股通 S深股通
-        act_name	str	Y	实控人名称
-        act_ent_type	str	Y	实控人企业性质"""
-
+        """从Tushare获取股票列表数据"""
+        # 输入参数
+        # 名称	类型	必选	描述
+        # ts_code	str	N	TS股票代码
+        # name	str	N	名称
+        # market	str	N	市场类别 （主板/创业板/科创板/CDR/北交所）
+        # list_status	str	N	上市状态 L上市 D退市 P暂停上市，默认是L
+        # exchange	str	N	交易所 SSE上交所 SZSE深交所 BSE北交所
+        # is_hs	str	N	是否沪深港通标的，N否 H沪股通 S深股通
+        # 输出参数
+        # 名称	类型	默认显示	描述
+        # ts_code	str	Y	TS代码
+        # symbol	str	Y	股票代码
+        # name	str	Y	股票名称
+        # area	str	Y	地域
+        # industry	str	Y	所属行业
+        # fullname	str	N	股票全称
+        # enname	str	N	英文全称
+        # cnspell	str	Y	拼音缩写
+        # market	str	Y	市场类型（主板/创业板/科创板/CDR）
+        # exchange	str	N	交易所代码
+        # curr_type	str	N	交易货币
+        # list_status	str	N	上市状态 L上市 D退市 P暂停上市
+        # list_date	str	Y	上市日期
+        # delist_date	str	N	退市日期
+        # is_hs	str	N	是否沪深港通标的，N否 H沪股通 S深股通
+        # act_name	str	Y	实控人名称
+        # act_ent_type	str	Y	实控人企业性质
         try:
         # enname	str	N	英文全称
             df = self.pro.query('stock_basic', exchange='', list_status='L', fields='ts_code,symbol,name,area,\
@@ -81,20 +80,20 @@ class DataFetcher:
             raise
     
     def get_name_change_data(self, ts_code: str) -> pd.DataFrame:
-        """" 描述：历史名称变更记录
-        输入参数
-        名称	类型	必选	描述
-        ts_code	str	N	TS代码
-        start_date	str	N	公告开始日期
-        end_date	str	N	公告结束日期
-        输出参数
-        名称	类型	默认输出	描述
-        ts_code	str	Y	TS代码
-        name	str	Y	证券名称
-        start_date	str	Y	开始日期
-        end_date	str	Y	结束日期
-        ann_date	str	Y	公告日期
-        change_reason	str	Y	变更原因"""
+        """" 描述：历史名称变更记录"""
+        # 输入参数
+        # 名称	类型	必选	描述
+        # ts_code	str	N	TS代码
+        # start_date	str	N	公告开始日期
+        # end_date	str	N	公告结束日期
+        # 输出参数
+        # 名称	类型	默认输出	描述
+        # ts_code	str	Y	TS代码
+        # name	str	Y	证券名称
+        # start_date	str	Y	开始日期
+        # end_date	str	Y	结束日期
+        # ann_date	str	Y	公告日期
+        # change_reason	str	Y	变更原因
         try:
             df = self.pro.namechange(ts_code=ts_code, fields='ts_code,name,start_date,end_date,change_reason')
             # print(df)
@@ -105,31 +104,31 @@ class DataFetcher:
             raise
 
     def get_all_stock_basic_data(self) -> pd.DataFrame:
-        """上市公司基本信息
-        输入参数
-        名称	类型	必须	描述
-        ts_code	str	N	股票代码
-        exchange	str	N	交易所代码 ，SSE上交所 SZSE深交所 BSE北交所
-        输出参数
-        名称	类型	默认显示	描述
-        ts_code	str	Y	股票代码
-        com_name	str	Y	公司全称
-        com_id	str	Y	统一社会信用代码
-        exchange	str	Y	交易所代码
-        chairman	str	Y	法人代表
-        manager	str	Y	总经理
-        secretary	str	Y	董秘
-        reg_capital	float	Y	注册资本(万元)
-        setup_date	str	Y	注册日期
-        province	str	Y	所在省份
-        city	str	Y	所在城市
-        introduction	str	N	公司介绍
-        website	str	Y	公司主页
-        email	str	Y	电子邮件
-        office	str	N	办公室
-        employees	int	Y	员工人数
-        main_business	str	N	主要业务及产品
-        business_scope	str	N	经营范围"""
+        """上市公司基本信息"""
+        # 输入参数
+        # 名称	类型	必须	描述
+        # ts_code	str	N	股票代码
+        # exchange	str	N	交易所代码 ，SSE上交所 SZSE深交所 BSE北交所
+        # 输出参数
+        # 名称	类型	默认显示	描述
+        # ts_code	str	Y	股票代码
+        # com_name	str	Y	公司全称
+        # com_id	str	Y	统一社会信用代码
+        # exchange	str	Y	交易所代码
+        # chairman	str	Y	法人代表
+        # manager	str	Y	总经理
+        # secretary	str	Y	董秘
+        # reg_capital	float	Y	注册资本(万元)
+        # setup_date	str	Y	注册日期
+        # province	str	Y	所在省份
+        # city	str	Y	所在城市
+        # introduction	str	N	公司介绍
+        # website	str	Y	公司主页
+        # email	str	Y	电子邮件
+        # office	str	N	办公室
+        # employees	int	Y	员工人数
+        # main_business	str	N	主要业务及产品
+        # business_scope	str	N	经营范围
         try:
             df = self.pro.stock_company(exchange='SZSE', fields='ts_code,chairman,manager,secretary,reg_capital,setup_date,province,main_business,business_scope')
             # print(test_data.head())
@@ -139,25 +138,25 @@ class DataFetcher:
             raise
 
     def get_ipo_list_data(self, start_date: str, end_date: str) -> pd.DataFrame:
-        """IPO新股列表
-        输入参数
-        名称	类型	必选	描述
-        start_date	str	N	上网发行开始日期
-        end_date	str	N	上网发行结束日期
-        输出参数
-        名称	类型	默认显示	描述
-        ts_code	str	Y	TS股票代码
-        sub_code	str	Y	申购代码
-        name	str	Y	名称
-        ipo_date	str	Y	上网发行日期
-        issue_date	str	Y	上市日期
-        amount	float	Y	发行总量（万股）
-        market_amount	float	Y	上网发行总量（万股）
-        price	float	Y	发行价格
-        pe	float	Y	市盈率
-        limit_amount	float	Y	个人申购上限（万股）
-        funds	float	Y	募集资金（亿元）
-        ballot	float	Y	中签率"""
+        """IPO新股列表"""
+        # 输入参数
+        # 名称	类型	必选	描述
+        # start_date	str	N	上网发行开始日期
+        # end_date	str	N	上网发行结束日期
+        # 输出参数
+        # 名称	类型	默认显示	描述
+        # ts_code	str	Y	TS股票代码
+        # sub_code	str	Y	申购代码
+        # name	str	Y	名称
+        # ipo_date	str	Y	上网发行日期
+        # issue_date	str	Y	上市日期
+        # amount	float	Y	发行总量（万股）
+        # market_amount	float	Y	上网发行总量（万股）
+        # price	float	Y	发行价格
+        # pe	float	Y	市盈率
+        # limit_amount	float	Y	个人申购上限（万股）
+        # funds	float	Y	募集资金（亿元）
+        # ballot	float	Y	中签率
         try:
             df = self.pro.new_share(start_date=start_date, end_date=end_date)
             # print(df)
@@ -168,37 +167,37 @@ class DataFetcher:
             raise
     
     def get_history_stock_list_data(self, trade_date: str) -> pd.DataFrame:
-        """股票历史列表（历史每天股票列表）
-        输入参数
-        名称	类型	必选	描述
-        trade_date	str	N	交易日期
-        ts_code	str	N	股票代码
-        输出参数
-        名称	类型	默认显示	描述
-        trade_date	str	Y	交易日期
-        ts_code	str	Y	TS股票代码
-        name	str	Y	股票名称
-        industry	str	Y	行业
-        area	str	Y	地域
-        pe	float	Y	市盈率（动）
-        float_share	float	Y	流通股本（亿）
-        total_share	float	Y	总股本（亿）
-        total_assets	float	Y	总资产（亿）
-        liquid_assets	float	Y	流动资产（亿）
-        fixed_assets	float	Y	固定资产（亿）
-        reserved	float	Y	公积金
-        reserved_pershare	float	Y	每股公积金
-        eps	float	Y	每股收益
-        bvps	float	Y	每股净资产
-        pb	float	Y	市净率
-        list_date	str	Y	上市日期
-        undp	float	Y	未分配利润
-        per_undp	float	Y	每股未分配利润
-        rev_yoy	float	Y	收入同比（%）
-        profit_yoy	float	Y	利润同比（%）
-        gpr	float	Y	毛利率（%）
-        npr	float	Y	净利润率（%）
-        holder_num	int	Y	股东人数"""
+        """股票历史列表（历史每天股票列表"""
+        # 输入参数
+        # 名称	类型	必选	描述
+        # trade_date	str	N	交易日期
+        # ts_code	str	N	股票代码
+        # 输出参数
+        # 名称	类型	默认显示	描述
+        # trade_date	str	Y	交易日期
+        # ts_code	str	Y	TS股票代码
+        # name	str	Y	股票名称
+        # industry	str	Y	行业
+        # area	str	Y	地域
+        # pe	float	Y	市盈率（动）
+        # float_share	float	Y	流通股本（亿）
+        # total_share	float	Y	总股本（亿）
+        # total_assets	float	Y	总资产（亿）
+        # liquid_assets	float	Y	流动资产（亿）
+        # fixed_assets	float	Y	固定资产（亿）
+        # reserved	float	Y	公积金
+        # reserved_pershare	float	Y	每股公积金
+        # eps	float	Y	每股收益
+        # bvps	float	Y	每股净资产
+        # pb	float	Y	市净率
+        # list_date	str	Y	上市日期
+        # undp	float	Y	未分配利润
+        # per_undp	float	Y	每股未分配利润
+        # rev_yoy	float	Y	收入同比（%）
+        # profit_yoy	float	Y	利润同比（%）
+        # gpr	float	Y	毛利率（%）
+        # npr	float	Y	净利润率（%）
+        # holder_num	int	Y	股东人数
         try:
             df = self.pro.bak_basic(trade_date=trade_date, fields='trade_date,ts_code,name,industry,pe')
             print(df)
@@ -208,61 +207,147 @@ class DataFetcher:
             raise
     
     def get_realtime_data(self, ts_code: str, source: str) -> pd.DataFrame:
-        """实时盘口TICK快照(爬虫版)
-        接口：realtime_quote，A股实时行情
-        描述：本接口是tushare org版实时接口的顺延，数据来自网络，且不进入tushare服务器，属于爬虫接口，请将tushare升级到1.3.3版本以上。
-        权限：0积分完全开放，但需要有tushare账号，如果没有账号请先注册。
-        说明：由于该接口是纯爬虫程序，跟tushare服务器无关，因此tushare不对数据内容和质量负责。数据主要用于研究和学习使用，如做商业目的，请自行解决合规问题。
-        输入参数
-        名称	类型	必选	描述
-        ts_code	str	N	股票代码，需按tushare股票和指数标准代码输入，比如：000001.SZ表示平安银行，000001.SH表示上证指数
-        src	str	N	数据源 （sina-新浪 dc-东方财富，默认sina）
-        src数据源说明：
-        src源	说明	描述
-        sina	新浪财经	支持多个多个股票同时输入，举例：ts_code='600000.SH,000001.SZ'），一次最多不能超过50个股票
-        dc	东方财富	只支持单个股票提取
-        输出参数
-        名称	类型	描述
-        name	str	股票名称
-        ts_code	str	股票代码
-        date	str	交易日期
-        time	str	交易时间
-        open	float	开盘价
-        pre_close	float	昨收价
-        price	float	现价
-        high	float	今日最高价
-        low	float	今日最低价
-        bid	float	竞买价，即“买一”报价（元）
-        ask	float	竞卖价，即“卖一”报价（元）
-        volume	int	成交量（src=sina时是股，src=dc时是手）
-        amount	float	成交金额（元 CNY）
-        b1_v	float	委买一（量，单位：手，下同）
-        b1_p	float	委买一（价，单位：元，下同）
-        b2_v	float	委买二（量）
-        b2_p	float	委买二（价）
-        b3_v	float	委买三（量）
-        b3_p	float	委买三（价）
-        b4_v	float	委买四（量）
-        b4_p	float	委买四（价）
-        b5_v	float	委买五（量）
-        b5_p	float	委买五（价）
-        a1_v	float	委卖一（量，单位：手，下同）
-        a1_p	float	委卖一（价，单位：元，下同）
-        a2_v	float	委卖二（量）
-        a2_p	float	委卖二（价）
-        a3_v	float	委卖三（量）
-        a3_p	float	委卖三（价）
-        a4_v	float	委卖四（量）
-        a4_p	float	委卖四（价）
-        a5_v	float	委卖五（量）
-        a5_p	float	委卖五（价）"""
+        """实时盘口TICK快照(爬虫版)"""
+        # 接口：realtime_quote，A股实时行情
+        # 描述：本接口是tushare org版实时接口的顺延，数据来自网络，且不进入tushare服务器，属于爬虫接口，请将tushare升级到1.3.3版本以上。
+        # 权限：0积分完全开放，但需要有tushare账号，如果没有账号请先注册。
+        # 说明：由于该接口是纯爬虫程序，跟tushare服务器无关，因此tushare不对数据内容和质量负责。数据主要用于研究和学习使用，如做商业目的，请自行解决合规问题。
+        # 输入参数
+        # 名称	类型	必选	描述
+        # ts_code	str	N	股票代码，需按tushare股票和指数标准代码输入，比如：000001.SZ表示平安银行，000001.SH表示上证指数
+        # src	str	N	数据源 （sina-新浪 dc-东方财富，默认sina）
+        # src数据源说明：
+        # src源	说明	描述
+        # sina	新浪财经	支持多个多个股票同时输入，举例：ts_code='600000.SH,000001.SZ'），一次最多不能超过50个股票
+        # dc	东方财富	只支持单个股票提取
+        # 输出参数
+        # 名称	类型	描述
+        # name	str	股票名称
+        # ts_code	str	股票代码
+        # date	str	交易日期
+        # time	str	交易时间
+        # open	float	开盘价
+        # pre_close	float	昨收价
+        # price	float	现价
+        # high	float	今日最高价
+        # low	float	今日最低价
+        # bid	float	竞买价，即“买一”报价（元）
+        # ask	float	竞卖价，即“卖一”报价（元）
+        # volume	int	成交量（src=sina时是股，src=dc时是手）
+        # amount	float	成交金额（元 CNY）
+        # b1_v	float	委买一（量，单位：手，下同）
+        # b1_p	float	委买一（价，单位：元，下同）
+        # b2_v	float	委买二（量）
+        # b2_p	float	委买二（价）
+        # b3_v	float	委买三（量）
+        # b3_p	float	委买三（价）
+        # b4_v	float	委买四（量）
+        # b4_p	float	委买四（价）
+        # b5_v	float	委买五（量）
+        # b5_p	float	委买五（价）
+        # a1_v	float	委卖一（量，单位：手，下同）
+        # a1_p	float	委卖一（价，单位：元，下同）
+        # a2_v	float	委卖二（量）
+        # a2_p	float	委卖二（价）
+        # a3_v	float	委卖三（量）
+        # a3_p	float	委卖三（价）
+        # a4_v	float	委卖四（量）
+        # a4_p	float	委卖四（价）
+        # a5_v	float	委卖五（量）
+        # a5_p	float	委卖五（价）
         try:
             df = ts.realtime_quote(ts_code=ts_code, src=source)
-            print(df)
+            # print(df)
             self._save_to_cache(df, f"{ts_code}_realtime_data.parquet")
         except Exception as e:
             logger.error(f"Tushare数据获取股票实时行情失败: {str(e)}")
             raise
+    
+    def get_realtime_tick_data(self, ts_code: str, source: str) -> pd.DataFrame:
+        """实时成交数据(爬虫版)"""
+        # 接口：realtime_tick，由于采集和拼接当日以来的成交全历史，因此接口提取数据时需要一定时间，请耐心等待。请将tushare升级到1.3.3版本以上。
+        # 描述：本接口是tushare org版实时接口的顺延，数据来自网络，且不进入tushare服务器，属于爬虫接口，数据包括该股票当日开盘以来的所有分笔成交数据。
+        # 权限：0积分完全开放，但需要有tushare账号，如果没有账号请先注册。
+        # 说明：由于该接口是纯爬虫程序，跟tushare服务器无关，因此tushare不对数据内容和质量负责。数据主要用于研究和学习使用，如做商业目的，请自行解决合规问题。
+        # 输入参数
+        # 名称	类型	必选	描述
+        # ts_code	str	N	股票代码，需按tushare股票代码标准输入，比如：000001.SZ表示平安银行，600000.SH表示浦发银行，单次只能输入一个股票
+        # src	str	N	数据源 （sina-新浪 dc-东方财富，默认sina）
+        # 输出参数
+        # 名称	类型	描述
+        # time	str	交易时间
+        # price	float	现价
+        # change	float	价格变动
+        # volume	int	成交量（单位：手）
+        # amount	int	成交金额（元）
+        # type	str	类型：买入/卖出/中性
+        try:
+            df = ts.realtime_tick(ts_code=ts_code, src=source)
+            # print(df)
+            self._save_to_cache(df, f"{ts_code}_realtime_tick.parquet")
+        except Exception as e:
+            logger.error(f"Tushare数据获取股票实时成交失败: {str(e)}")
+            raise
+
+    def get_realtime_rank_data(self, source: str, date: str) -> pd.DataFrame:
+        """实时涨跌幅排名(爬虫版)"""
+        # 接口：realtime_list，由于采集和拼接当日以来的成交全历史，因此接口提取数据时需要一定时间，请耐心等待，请将tushare升级到1.3.3版本以上。
+        # 描述：本接口是tushare org版实时接口的顺延，数据来自网络，且不进入tushare服务器，属于爬虫接口，数据包括该股票当日开盘以来的所有分笔成交数据。
+        # 权限：0积分完全开放，但需要有tushare账号，如果没有账号请先注册。
+        # 说明：由于该接口是纯爬虫程序，跟tushare服务器无关，因此tushare不对数据内容和质量负责。数据主要用于研究和学习使用，如做商业目的，请自行解决合规问题。
+
+        # 输入参数
+        # 名称	类型	必选	描述
+        # src	str	N	数据源 （sina-新浪 dc-东方财富，默认dc）
+
+        # 东财数据输出参数
+        # 名称	类型	描述
+        # ts_code	str	股票代码
+        # name	str	股票名称
+        # price	float	当前价格
+        # pct_change	float	涨跌幅
+        # change	float	涨跌额
+        # volume	int	成交量（单位：手）
+        # amount	int	成交金额（元）
+        # swing	float	振幅
+        # low	float	今日最低价
+        # high	float	今日最高价
+        # open	float	今日开盘价
+        # close	float	今日收盘价
+        # vol_ratio	int	量比
+        # turnover_rate	float	换手率
+        # pe	int	市盈率PE
+        # pb	float	市净率PB
+        # total_mv	float	总市值（元）
+        # float_mv	float	流通市值（元）
+        # rise	float	涨速
+        # 5min	float	5分钟涨幅
+        # 60day	float	60天涨幅
+        # 1tyear	float	1年涨幅
+
+        # 新浪数据输出参数
+        # 名称	类型	描述
+        # ts_code	str	股票代码
+        # name	str	股票名称
+        # price	float	当前价格
+        # pct_change	float	涨跌幅
+        # change	float	涨跌额
+        # buy	float	买入价
+        # sale	float	卖出价
+        # close	float	今日收盘价
+        # open	float	今日开盘价
+        # high	float	今日最高价
+        # low	float	今日最低价
+        # volume	int	成交量（单位：股）
+        # amount	int	成交金额（元）
+        # time	str	当前时间
+        try:
+            df = ts.realtime_list(src=source)
+            # print(df)
+            self._save_to_cache(df, f"{date}_realtime_rank.parquet")
+        except Exception as e:
+            logger.error(f"Tushare数据获取股票实时排名失败: {str(e)}")
+            raise 
     
     def get_stock_capital_data(self) -> pd.DataFrame:
         """股票股本情况to be define"""
@@ -342,7 +427,7 @@ if __name__ == "__main__":
     # fetcher.get_name_change_data('002008.SZ')
     # fetcher.get_ipo_list_data('20250210','20250226')
     # fetcher.get_history_stock_list_data('20250227')
-    fetcher.get_realtime_data('301601.SZ','dc')
+    fetcher.get_realtime_tick_data('601949.SH','dc')
     #交易日历  获取途径 1.tushare 权限2000 
     # test_data = fetcher.pro.query('trade_cal', start_date='20180101', end_date='20181231')
     # print(test_data.head())
@@ -409,6 +494,7 @@ if __name__ == "__main__":
     #单只股票的复权因子 获取途径 1.tushare 权限2000
     # pro.adj_factor(ts_code='', trade_date='20180718') 或者 pro.query('adj_factor',  trade_date='20180718')
 
+    # 已验证
     #实时行情 获取途径 1. tushare
     #sina数据
     # df = ts.realtime_quote(ts_code='600000.SH,000001.SZ,000001.SH')
@@ -416,6 +502,7 @@ if __name__ == "__main__":
     #东财数据
     # df = ts.realtime_quote(ts_code='600000.SH', src='dc')
 
+    # 已验证
     #实时成交数据 获取途径 1.tushare (源码做了限制 0.5s爬一次 速度很慢) src='sina' 'tx' 'dc'
     # df = ts.realtime_tick(ts_code='002600.SZ')
     # print(df)
