@@ -7,6 +7,15 @@ from typing import Dict, Optional
 from pathlib import Path
 from fake_useragent import UserAgent
 from ..config import TUSHARE_TOKEN, DATA_STORAGE
+v = pd.__version__ 
+if int(v.split('.')[1])>=25 or int(v.split('.')[0])>0:
+    from io import StringIO
+else:    
+    from pandas.compat import StringIO
+try:
+    from urllib.request import urlopen, Request
+except ImportError:
+    from urllib2 import urlopen, Request
 
 logger = logging.getLogger(__name__)
 
@@ -349,6 +358,31 @@ class DataFetcher:
             logger.error(f"Tushare数据获取股票实时排名失败: {str(e)}")
             raise 
     
+    def get_stock_cash_flow_data(self, ts_code: str) -> pd.DataFrame:
+        """股票现金流量表（自研爬虫）"""
+        # 获取某股票的历史所有时期现金流表
+        # Parameters
+        # code:str 股票代码 e.g:600518
+        # --------
+        # Return
+        # DataFrame
+        # 行列名称为中文且数目较多，建议获取数据后保存到本地查看
+        SINA_CASHFLOW_URL = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_CashFlow/displaytype/4/stockid/%s/ctrl/all.phtml'
+        if ts_code.isdigit():
+            try:
+                request = Request(SINA_CASHFLOW_URL%(ts_code))
+                text = urlopen(request, timeout=10).read()
+                text = text.decode('GBK')
+                text = text.replace('\t\n', '\r\n')
+                text = text.replace('\t', ',')
+                df = pd.read_csv(StringIO(text), dtype={'code':'object'})
+                print(df)
+                df.to_csv(f'data/{ts_code}_cash_flow.csv',index=False)
+                return df
+            except Exception as e:
+                logger.error(f"crawler爬虫数据获取股票现金流失败: {str(e)}")
+                raise
+            
     def get_stock_capital_data(self) -> pd.DataFrame:
         """股票股本情况to be define"""
     def get_company_manager_info(self, ts_code: str) -> pd.DataFrame:
@@ -427,7 +461,8 @@ if __name__ == "__main__":
     # fetcher.get_name_change_data('002008.SZ')
     # fetcher.get_ipo_list_data('20250210','20250226')
     # fetcher.get_history_stock_list_data('20250227')
-    fetcher.get_realtime_tick_data('601949.SH','dc')
+    # fetcher.get_realtime_tick_data('601949.SH','dc')
+    fetcher.get_stock_cash_flow_data('300866')
     #交易日历  获取途径 1.tushare 权限2000 
     # test_data = fetcher.pro.query('trade_cal', start_date='20180101', end_date='20181231')
     # print(test_data.head())
